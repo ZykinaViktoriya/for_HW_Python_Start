@@ -7,9 +7,9 @@
 # 385916 -> yes
 # 123456 -> no
 
-ticket = list(map(int, list(input())))
-sum1 = sum(ticket[:-3])
-sum2 = sum(ticket[-3:])
+ticket = list(map(int, input()))
+sum1 = sum(ticket[:3])
+sum2 = sum(ticket[3:])
 if sum1 == sum2:
     print("Вам попался счастливый билетик")
 else:

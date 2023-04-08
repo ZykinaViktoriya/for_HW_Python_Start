@@ -8,7 +8,6 @@
 number = int(input())
 sum = 0
 while number > 0:
-    num = number % 10
-    sum += num
-    number = number // 10
+    sum += number % 10
+    number //= 10
 print(sum)    
