@@ -8,7 +8,7 @@
 sum = int(input('Введите сумму чисел: '))
 multiply = int(input('Введите произведение чисел: '))
 
-for i in range(sum // 2 + 1):
+for i in range(sum):
     for j in range(multiply):
         if i + j == sum and i * j == multiply:
             print(f'X равен {i}, Y равен {j}')
