@@ -12,3 +12,9 @@ for i in range(sum):
     for j in range(multiply):
         if i + j == sum and i * j == multiply:
             print(f'X равен {i}, Y равен {j}')
+            break
+        ekse:
+            continue
+        break    
+else:
+    print('Решения с данными значениями не существует')
