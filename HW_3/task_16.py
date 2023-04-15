@@ -6,7 +6,7 @@
 
 import random
 N = int(input())
-arr_A = [random.randint(1, 5) for i in range(N)]
+arr_A = [random.randint(1, 10) for i in range(N)]
 print(arr_A)
 x = int(input())
 count = 0
