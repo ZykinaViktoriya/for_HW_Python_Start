@@ -5,13 +5,14 @@
 # Последняя строка содержит число X.
 
 import random
-N = int(input())
+N = int(input('Введите длину массива: '))
 arr_A = [random.randint(1, 10) for i in range(N)]
 print(arr_A)
-x = int(input())
+
+x = int(input('Введите искомое число: '))
+
 count = 0
 for i in arr_A:
     if i == x:
         count += 1
-
-print(count)
+print(f' Число {x} встречается {count} раз')
