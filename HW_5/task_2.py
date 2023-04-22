@@ -5,7 +5,9 @@
 # 2 2    4 
 
 def sum(a, b):
-    return a + b
+    if a == 0:
+        return b
+    return (sum(a - 1, b + 1))
 
 a = int(input('Введите первое положительное число: ')) 
 b = int(input('Введите второе положительное число: '))
