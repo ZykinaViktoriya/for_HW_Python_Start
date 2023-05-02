@@ -10,6 +10,8 @@ b = int(input('Введите число B: '))
 def exponen(a, b):
     if b == 1:
         return a
-    return (a * (exponen(a, b - 1)))
+    elif b == 0:
+        return 1
+    return a * (exponen(a, b - 1))
 
-print(exponen(a, b))
+print(exponen(a, b)) 
