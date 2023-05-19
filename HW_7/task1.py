@@ -5,10 +5,10 @@
 # В ответе напишите “Парам пам-пам”, если с ритмом все в порядке и “Пам парам”, если с ритмом все не в порядке
 
 def rhyme(song):
-    str = song.lower().split()
-    f = lambda x: sum(1 for i in x if i in "аеёиоуыэюя")
-    tmp = f(str[0])
-    if all([f(i) == tmp for i in str]):
+    s = song.lower().split()
+    f = lambda x: sum(i in "аеёиоуыэюя" for i in x)
+    tmp = f(s[0])
+    if all(f(i) == tmp for i in s):
         return 'Парам пам-пам'
     return 'Пам парам'
  
