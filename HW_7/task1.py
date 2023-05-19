@@ -1,14 +1,16 @@
-def win_and_pooh(song):
-    volwes = ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']
-    parts = song.split()
-    itog = list()
-    for item in parts:
-        k = 0
-        for letter in item:
-            if letter in volwes:
-                k += 1
-        itog.append(k)
-    if len(set(itog)) == 1:
-        print('Парам пам-пам')
-    else:
-        print('Пам парам')
+def rhyme(song):
+    str = song.lower().split()
+    f = lambda x: sum(1 for i in x if i in "аеёиоуыэюя")
+    tmp = f(str[0])
+    if all([f(i) == tmp for i in str]):
+        return 'Парам пам-пам'
+    return 'Пам парам'
+ 
+print(rhyme("пара-ра-рам рам-пам-папам па-ра-па-да")) 
+
+print(rhyme("Хорошо-живет-на-свете-Винни-Пух! Оттого-поет-он-эти-Песни-вслух!"))
+ 
+print(rhyme("И-не-важно,-чем-он-занят, Если-он-худеть-не-станет,"))
+ 
+print(rhyme("А-ведь-он-худеть-не-станет, Если-конечно...-Вовремя-не-подкрепиться..."))
+
